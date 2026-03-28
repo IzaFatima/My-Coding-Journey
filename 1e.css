@@ -1,0 +1,90 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+ max-width: 600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0 auto;   /* Center on large screens */
+}
+.boxes{
+  display: flex;
+  min-width: 300px;
+  justify-content: space-between;
+  padding: 6px;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-radius: 10px;
+  transition: all 0.3s cubic(0.4,0,0.2,1);
+  cursor: pointer;
+}
+.profile{
+  display: flex;
+  gap: 20px;
+}
+.img-con{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.img-con img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.content{
+ padding: 2px;
+}
+.name{
+  font-size: 18px;
+  font-weight: 600;
+   letter-spacing: 0.5px;
+}
+.details{
+  color: rgb(173, 173, 173);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.button-con{
+  min-width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-con button{
+  padding: 8px 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(57, 129, 224);
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.boxes:hover{
+  transform: translate(4px,-2px);
+  background-color: rgba(0,0,0,0.05);
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.button-con button:hover{
+  background-color: rgb(49,112,194);
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(49,112,194,0.3);
+}
+/* Add focus state for accessibility */
+ .button-con button:focus-visible{
+outline: 2px soild rgb(49,112,194);
+outline-offset: 2px;
+ }
